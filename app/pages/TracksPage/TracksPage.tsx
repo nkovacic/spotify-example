@@ -1,16 +1,17 @@
 import React, { PureComponent } from 'react';
-import { View, StyleSheet, SafeAreaView, StatusBar } from 'react-native';
+import { View, StyleSheet, SafeAreaView } from 'react-native';
+import { NavigationScreenProps } from 'react-navigation';
 
 import { Page } from 'app/components';
 import appStyle from 'app/appStyle';
 
-interface Props {}
-
-interface State {
-	activeIndex: number;
+interface INavigationParams {
+	playlist: SpotifyApi.PlaylistObjectSimplified;
 }
 
-class TracksPage extends PureComponent<Props, State> {
+interface Props extends NavigationScreenProps<INavigationParams> {}
+
+class TracksPage extends PureComponent<Props> {
 	render() {
 		return (
 			<Page noMargin={true}>

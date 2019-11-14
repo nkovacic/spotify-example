@@ -1,8 +1,8 @@
-import React, { Component, PureComponent } from 'react';
-import { View,StyleSheet } from 'react-native';
+import React, { PureComponent } from 'react';
+import { View, ScrollView, StyleSheet } from 'react-native';
 import { MappedStateAndActions } from 'redux-render-prop';
 
-import { CustomText, Page } from 'app/components';
+import { Page } from 'app/components';
 import { createAppConnect } from 'app/modules/connect';
 
 import { 
@@ -12,7 +12,7 @@ import {
 import mainTranslations from 'app/mainTranslations';
 
 import images from '../../assets/images';
-import { ScrollView } from 'react-native-gesture-handler';
+
 
 class Main extends PureComponent<MappedStateAndActions<typeof MainConnect>> {
 	componentDidMount() {
