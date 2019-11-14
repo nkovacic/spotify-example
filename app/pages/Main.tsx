@@ -12,11 +12,10 @@ import {
 import mainTranslations from 'app/mainTranslations';
 
 import images from '../../assets/images';
-import SpotifyService from 'app/modules/spotify/SpotifyService';
 
 class Main extends PureComponent<MappedStateAndActions<typeof MainConnect>> {
 	componentDidMount() {
-		SpotifyService.initializeAsync();
+		this.props.appInit();
 	}
 
 	render() {
@@ -47,6 +46,7 @@ const MainConnect = createAppConnect({
 	},
 	mapActions: (actions) => {
 		return {
+			appInit: actions.appActions.init,
 			changeRoute(route: string) {
 				actions.routingActions.changeRoute(route);
 			}

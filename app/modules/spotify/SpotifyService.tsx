@@ -21,7 +21,7 @@ class SpotifyService {
             const spotifyOptions = {
 				'clientID': '46b53485b8e548dcae66adaf7163a0da',
 				'sessionUserDefaultsKey':'SpotifySession',
-				'redirectURL':'examplespotifyapp://auth',
+				'redirectURL':'spotifyexample://auth',
 				'scopes': ['user-read-private', 'playlist-read', 'playlist-read-private'],
             };
             
@@ -32,7 +32,7 @@ class SpotifyService {
 
         if (session && UtilityHelper.isNotEmpty(session.accessToken)) {
             this.spotifyApi = new SpotifyApi();
-
+ 
             this.spotifyApi.setAccessToken(session.accessToken);
         }
 
@@ -40,11 +40,23 @@ class SpotifyService {
     }
 
     public async isInitializedAsync() {
-        return SpotifySdk.isInitializedAsync() as Promise<boolean>;
+        return await SpotifySdk.isInitializedAsync() as Promise<boolean>;
+    }
+
+    public async isLoggedInAsync() {
+        return await SpotifySdk.isLoggedInAsync() as Promise<boolean>;
+    }
+
+    public async loginAsync() {
+        return await SpotifySdk.login() as Promise<boolean>;
     }
 
     public async getSessionAsync() {
         return await SpotifySdk.getSessionAsync() as ISpotifySession;
+    }
+
+    public getSpotifyApi() {
+        return this.spotifyApi;
     }
 } 
 

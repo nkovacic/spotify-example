@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import Logo, { LogoSize } from './Logo';
+import { View, StyleSheet } from 'react-native';
 import { STATUSBAR_HEIGHT } from 'app/appStyle';
-import { PlatformHelper } from 'app/services/PlatformHelper';
-import { CustomText } from '.';
-import { FontWeight } from './CustomText';
+import CustomText, { FontWeight } from './CustomText';
 import mainTranslations from 'app/mainTranslations';
 
 class NavbarTitle extends Component<any> {
