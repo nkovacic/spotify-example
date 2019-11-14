@@ -39,8 +39,9 @@
     "render-when-focused": "^1.0.0",
     "reselect": "^4.0.0",
     "rn-fetch-blob": "0.10.15",
+    "rn-spotify-sdk": "^1.2.12",
+    "spotify-web-api-js": "^1.2.0",
     "uuid": "^3.3.2",
-    "victory-native": "^32.0.2",
     "yup": "^0.26.6"
   },
   "devDependencies": {

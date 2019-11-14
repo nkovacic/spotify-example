@@ -80,6 +80,10 @@ export class UtilityHelper {
         return true;
     }
 
+    static isNotEmpty(value: any) {
+        return !UtilityHelper.isEmpty(value);
+    }
+
     static isIterableArray(value: any) {
         if (value == null || this.isUndefined(value)) {
             return false;

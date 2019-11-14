@@ -4,12 +4,21 @@ import { MappedStateAndActions } from 'redux-render-prop';
 
 import { CustomText, Page } from 'app/components';
 import { createAppConnect } from 'app/modules/connect';
-import HeaderComponent from './components/HeaderComponent';
+
+import { 
+	ContainerComponent, HeaderComponent 
+} from 'app/pages/components';
+
 import mainTranslations from 'app/mainTranslations';
+
 import images from '../../assets/images';
-import ContainerComponent from './components/ContainerComponent';
+import SpotifyService from 'app/modules/spotify/SpotifyService';
 
 class Main extends PureComponent<MappedStateAndActions<typeof MainConnect>> {
+	componentDidMount() {
+		SpotifyService.initializeAsync();
+	}
+
 	render() {
 		return (
 			<Page noMargin={true}>
