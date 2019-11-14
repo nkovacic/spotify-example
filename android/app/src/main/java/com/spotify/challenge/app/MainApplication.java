@@ -3,6 +3,8 @@ package com.spotify.challenge.app;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.lufinkey.react.spotify.RNSpotifyPackage;;
+import com.lufinkey.react.eventemitter.RNEventEmitterPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 
@@ -29,6 +31,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNSpotifyPackage(),
+            new RNEventEmitterPackage(),
             new RNGestureHandlerPackage(),
             new SplashScreenReactPackage(),
             new VectorIconsPackage(),

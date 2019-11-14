@@ -33,6 +33,10 @@ target 'Spotify' do
   pod 'Folly', :podspec => "#{rn_path}/third-party-podspecs/Folly.podspec"
 
   # Add new pods below this line
+  pod 'RNSpotify', :path => '../node_modules/rn-spotify-sdk'
+
+  pod 'RNEventEmitter', :path => '../node_modules/react-native-events'
+
   pod 'rn-fetch-blob', :path => '../node_modules/rn-fetch-blob'
 
   pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
