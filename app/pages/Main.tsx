@@ -6,12 +6,13 @@ import { CustomText, Page } from 'app/components';
 import { createAppConnect } from 'app/modules/connect';
 
 import { 
-	ContainerComponent, HeaderComponent 
+	HeaderComponent, PlaylistsListComponent
 } from 'app/pages/components';
 
 import mainTranslations from 'app/mainTranslations';
 
 import images from '../../assets/images';
+import { ScrollView } from 'react-native-gesture-handler';
 
 class Main extends PureComponent<MappedStateAndActions<typeof MainConnect>> {
 	componentDidMount() {
@@ -23,7 +24,9 @@ class Main extends PureComponent<MappedStateAndActions<typeof MainConnect>> {
 			<Page noMargin={true}>
 				<View style={styles.container}>
 					<HeaderComponent title={mainTranslations.general.appTitle} imageSrc={images.header} />
-					<ContainerComponent />
+					<ScrollView>
+						<PlaylistsListComponent playlists={this.props.playlists} />
+					</ScrollView>
 				</View>
 			</Page>
 		);
@@ -41,7 +44,7 @@ const styles = StyleSheet.create({
 const MainConnect = createAppConnect({
 	mapState: (state) => {
 		return {
-			currentRoute: state.routingSelector.currentRouteSelector()
+			playlists: state.spotifySelectors.getPlaylists()
 		};
 	},
 	mapActions: (actions) => {

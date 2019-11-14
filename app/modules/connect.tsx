@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 
 import { IMainState } from './reducers';
 import { AppSelectors } from './app/state';
+import { SpotifySelectors } from './spotify/state';
 import { RoutingSelectors } from './routing';
 
 import { appReducerActionCreators } from './app/reducer';
@@ -12,7 +13,8 @@ import { spotifyReducerActionCreators } from './spotify/reducer';
 export const createAppConnect = makeConnector({
     prepareState: (state: IMainState) => ({
         appSelector: new AppSelectors(state),
-        routingSelector: new RoutingSelectors(state)
+        routingSelector: new RoutingSelectors(state),
+        spotifySelectors: new SpotifySelectors(state)
     }),
 
     prepareActions: (dispatch) => {

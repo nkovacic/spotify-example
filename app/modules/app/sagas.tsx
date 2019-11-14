@@ -2,6 +2,7 @@
 import { takeLeading, call, put } from "redux-saga/effects";
 
 import { appReducerActionCreators } from "./reducer";
+import { spotifyReducerActionCreators } from "app/modules/spotify/reducer";
 
 import SpotifyService from "app/modules/spotify/SpotifyService";
 import { AlertService } from "app/services";
@@ -20,14 +21,14 @@ const appInit = function* () {
     if (!isLoggedIn) {
         isLoggedIn = yield call({
             context: SpotifyService,
-            fn: SpotifyService.loginAsync
+            fn: SpotifyService.refreshLogin
         });
     }
 
-    if (isLoggedIn) {
-        yield put(appReducerActionCreators.showPageLoader());
+    const spotifyApi = SpotifyService.getSpotifyApi();
 
-        const spotifyApi = SpotifyService.getSpotifyApi();
+    if (isLoggedIn && spotifyApi) {
+        yield put(appReducerActionCreators.showPageLoader());
 
         const currentUser: SpotifyApi.CurrentUsersProfileResponse = yield call({
             context: spotifyApi,
@@ -41,7 +42,11 @@ const appInit = function* () {
             country: currentUser.country
         })
         
-        
+        if (userCountryFeaturedPlaylists) {
+            yield put(spotifyReducerActionCreators.setPlaylists(userCountryFeaturedPlaylists.playlists));
+        }
+
+        yield put(appReducerActionCreators.hidePageLoader());
     }
     else {
         AlertService.warning('Spotify login is required! Restart app and start again.');

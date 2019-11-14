@@ -1,2 +1,2 @@
-export { default as ContainerComponent } from './ContainerComponent';
 export { default as HeaderComponent } from './HeaderComponent';
+export { default as PlaylistsListComponent } from './PlaylistsListComponent'

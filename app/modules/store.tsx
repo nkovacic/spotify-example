@@ -11,7 +11,7 @@ const persistConfig: PersistConfig = {
     key: 'root',
     // tslint:disable-next-line: object-shorthand-properties-first
     storage,
-    blacklist: ['routing', 'layout']
+    whitelist: []
 };
 
 if (__DEV__) {
