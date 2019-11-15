@@ -28,8 +28,7 @@ const PlaylistItemSmallComponent: SFC<Props> = (props) => {
 				<CustomText style={style.title} fontWeight={FontWeight.bold}>
 					{props.playlist.name}
 				</CustomText>
-				<CircleView size={scale(30)} style={style.circle}>
-					
+				<CircleView size={scale(30)} style={style.circle}>					
 					<CustomText fontWeight={FontWeight.bold} style={{color:'white'}}>{props.playlist.tracks ? props.playlist.tracks.total : 0}</CustomText>
 				</CircleView>
 				
