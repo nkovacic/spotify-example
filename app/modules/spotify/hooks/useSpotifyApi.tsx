@@ -1,13 +1,9 @@
 import { useState, useEffect } from "react";
 
-export interface ISpotifyApiHookResult<T> {
-    loading: boolean;
-    data: T;
-    error: any;
-}
+export type SpotifyApiHookResult<T> = [T, boolean, any];
 
 type SpotifyApiFunc<T = any> = (options?: any) => Promise<T>;
-type SpotifyApiHook<T> = (spotifyApiFunc: SpotifyApiFunc<T>, options?: any) => ISpotifyApiHookResult<T>;
+type SpotifyApiHook<T> = (spotifyApiFunc: SpotifyApiFunc<T>, options?: any) => SpotifyApiHookResult<T>;
 
 const useSpotifyApi = (spotifyApiFunc: SpotifyApiFunc, options?: any) => {
     const [loading, setLoading] = useState(false);
@@ -22,7 +18,7 @@ const useSpotifyApi = (spotifyApiFunc: SpotifyApiFunc, options?: any) => {
                 const result = await spotifyApiFunc(options);
 
                 setLoading(false);
-                setData(data);
+                setData(result);
                 setError(null);
             } catch (e) {
                 setLoading(false);
@@ -35,7 +31,7 @@ const useSpotifyApi = (spotifyApiFunc: SpotifyApiFunc, options?: any) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [options]);
 
-    return { data, loading, error };
+    return [data, loading, error ];
 };
 
 export default useSpotifyApi;

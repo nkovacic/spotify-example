@@ -42,8 +42,6 @@ class SpotifyService {
         if (isLoggedIn) {
             const session = await this.getSessionAsync();
 
-            Logger.log(`Session: ${JSON.stringify(session)}`);
-
             return session && isAfter(session.expireTime, new Date());
         }
 

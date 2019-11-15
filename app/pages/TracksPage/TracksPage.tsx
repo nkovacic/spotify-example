@@ -4,6 +4,7 @@ import { NavigationScreenProps } from 'react-navigation';
 
 import { Page } from 'app/components';
 import appStyle from 'app/appStyle';
+import { PlaylistDetailsComponent } from '../components/playlists';
 
 interface INavigationParams {
 	playlist: SpotifyApi.PlaylistObjectSimplified;
@@ -16,7 +17,7 @@ class TracksPage extends PureComponent<Props> {
 		return (
 			<Page noMargin={true}>
 				<SafeAreaView style={{ flex: 1, backgroundColor: appStyle.colors.background }}>
-					<View style={styles.container} />
+					<PlaylistDetailsComponent playlist={this.props.navigation.getParam('playlist')} />
 				</SafeAreaView>
 			</Page>
 		);

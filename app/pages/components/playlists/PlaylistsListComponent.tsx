@@ -12,7 +12,7 @@ const PlaylistsListComponent: SFC<Props> = (props) => {
         <View style={style.container}>
             {
                 props.playlists.map(q => (
-                    <PlaylistItemSmallComponent playlist={q} />            
+                    <PlaylistItemSmallComponent key={q.id} playlist={q} />            
                 ))
             }
         </View>
