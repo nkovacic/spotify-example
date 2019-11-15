@@ -5,14 +5,12 @@ import { MappedStateAndActions } from 'redux-render-prop';
 import { Page } from 'app/components';
 import { createAppConnect } from 'app/modules/connect';
 
-import { 
-	HeaderComponent, PlaylistsListComponent
-} from 'app/pages/components';
+import { HeaderComponent, PlaylistsListComponent } from 'app/pages/components';
 
 import mainTranslations from 'app/mainTranslations';
 
 import images from '../../assets/images';
-
+import { scale } from 'app/utilities/scaling';
 
 class Main extends PureComponent<MappedStateAndActions<typeof MainConnect>> {
 	componentDidMount() {
@@ -24,7 +22,7 @@ class Main extends PureComponent<MappedStateAndActions<typeof MainConnect>> {
 			<Page noMargin={true}>
 				<View style={styles.container}>
 					<HeaderComponent title={mainTranslations.general.appTitle} imageSrc={images.header} />
-					<ScrollView>
+					<ScrollView style={styles.dataContainer}>
 						<PlaylistsListComponent playlists={this.props.playlists} />
 					</ScrollView>
 				</View>
@@ -36,7 +34,10 @@ class Main extends PureComponent<MappedStateAndActions<typeof MainConnect>> {
 const styles = StyleSheet.create({
 	container: {
 		flexDirection: 'column',
-        flex: 1   
+		flex: 1
+	},
+	dataContainer: {
+		marginTop: scale(10)
 	}
 });
 

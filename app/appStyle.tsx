@@ -24,11 +24,13 @@ const appStyle = {
             default: scale(15),
             big: scale(20),
         },
-        family: 'Roboto',
+        family: 'Gilroy',
         weight: {
-            regular: 'Roboto-Regular', 
-            medium: 'Roboto-Medium', 
-            bold: 'Roboto-Bold'
+            regular: 'Gilroy-Regular', 
+            medium: 'Gilroy-Medium', 
+            bold: 'Gilroy-Bold',
+            heavy:'Gilroy-Heavy',
+            light:'Gilroy-Light'
         } 
     },
     gradients: {
