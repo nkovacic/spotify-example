@@ -31,10 +31,25 @@ const TrackItemComponent: SFC<Props> = (props) => {
 		<CustomTouchable onPress={onTrackPressed} style={props.style}>
 			<View style={style.container}>
 				<Image style={style.image} source={{ uri: albumImageUrl }} />
-				<View style={{marginLeft:scale(10)}}>
-					<CustomText fontWeight={FontWeight.bold} style={{color:'black',fontSize:16,flexWrap:'wrap'}}>{props.track.name}</CustomText>
-					<CustomText fontWeight={FontWeight.medium} style={{color:'gray',fontSize:16}}>Artists: {artists}</CustomText>
-					<CustomText fontWeight={FontWeight.medium} style={{color:'gray',fontSize:16}}>Popularity: {props.track.popularity}</CustomText>
+				<View style={{ marginLeft: scale(10) }}>
+					<CustomText
+						fontWeight={FontWeight.bold}
+						style={{
+							color: 'black',
+							fontSize: 16,
+							flexWrap: 'wrap',
+							width: scale(230),
+						}}
+					>
+						{props.track.name}
+					</CustomText>
+					<CustomText fontWeight={FontWeight.medium} style={{ color: 'gray', fontSize: 16,flexWrap: 'wrap',
+							width: scale(230), }}>
+						Artists: {artists}
+					</CustomText>
+					<CustomText fontWeight={FontWeight.medium} style={{ color: 'gray', fontSize: 16,marginTop:scale(5) }}>
+						Popularity: {props.track.popularity}
+					</CustomText>
 				</View>
 			</View>
 		</CustomTouchable>
@@ -44,12 +59,13 @@ const TrackItemComponent: SFC<Props> = (props) => {
 const style = StyleSheet.create({
 	image: {
 		height: scale(100),
-        width: scale(100),
-        borderRadius:scale(5)
+		width: scale(100),
+		borderRadius: scale(5)
 	},
 	container: {
-        flexDirection: 'row',
-        alignItems:'center'
+		flexDirection: 'row',
+		alignItems: 'center',
+		flex: 1
 	}
 });
 
