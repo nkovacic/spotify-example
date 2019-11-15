@@ -5,7 +5,7 @@ import { isAfter } from 'date-fns';
 
 import { UtilityHelper, Logger } from 'app/services';
 
-interface ISpotifySession {
+export interface ISpotifySession {
     accessToken: string;
     expireTime: Date;
     refreshToken: string;

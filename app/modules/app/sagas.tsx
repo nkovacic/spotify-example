@@ -23,6 +23,11 @@ const appInit = function* () {
             context: SpotifyService,
             fn: SpotifyService.loginAsync
         });
+
+        yield call({
+            context: SpotifyService,
+            fn: SpotifyService.refreshAccessToken
+        });
     }
 
     const spotifyApi = SpotifyService.getSpotifyApi();
