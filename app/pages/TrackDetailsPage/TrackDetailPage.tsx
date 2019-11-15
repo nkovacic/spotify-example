@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { View, StyleSheet, SafeAreaView, StatusBar } from 'react-native';
+import { ScrollView, View, StyleSheet, SafeAreaView, StatusBar } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 
 import { Page } from 'app/components';
@@ -18,7 +18,9 @@ class TrackDetailPage extends PureComponent<Props> {
 		return (
 			<Page noMargin={true}>
 				<SafeAreaView style={{ flex: 1, backgroundColor: appStyle.colors.background }}>
-					<TrackDetailsComponent track={this.props.navigation.getParam('track')} />
+					<ScrollView>
+						<TrackDetailsComponent track={this.props.navigation.getParam('track')} />
+					</ScrollView>					
 				</SafeAreaView>
 			</Page>
 		);
