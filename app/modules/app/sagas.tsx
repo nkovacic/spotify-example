@@ -21,7 +21,7 @@ const appInit = function* () {
     if (!isLoggedIn) {
         isLoggedIn = yield call({
             context: SpotifyService,
-            fn: SpotifyService.refreshLogin
+            fn: SpotifyService.loginAsync
         });
     }
 

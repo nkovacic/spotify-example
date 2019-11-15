@@ -1,21 +1,24 @@
 import React, { PureComponent } from 'react';
 import { View, StyleSheet, SafeAreaView, StatusBar } from 'react-native';
+import { NavigationScreenProps } from 'react-navigation';
 
 import { Page } from 'app/components';
+import { TrackDetailsComponent } from 'app/pages/components/tracks';
+
 import appStyle from 'app/appStyle';
 
-interface Props {}
-
-interface State {
-	activeIndex: number;
+interface INavigationParams {
+	track: SpotifyApi.TrackObjectFull;
 }
 
-class TrackDetailPage extends PureComponent<Props, State> {
+interface Props extends NavigationScreenProps<INavigationParams> {}
+
+class TrackDetailPage extends PureComponent<Props> {
 	render() {
 		return (
 			<Page noMargin={true}>
 				<SafeAreaView style={{ flex: 1, backgroundColor: appStyle.colors.background }}>
-					<View style={styles.container} />
+					<TrackDetailsComponent track={this.props.navigation.getParam('track')} />
 				</SafeAreaView>
 			</Page>
 		);

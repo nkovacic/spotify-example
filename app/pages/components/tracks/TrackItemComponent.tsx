@@ -1,7 +1,11 @@
 import React, { SFC } from "react";
-import { View, Image, StyleProp, ViewStyle } from "react-native";
+import { View, Image, StyleSheet, StyleProp, ViewStyle } from "react-native";
+
 import { CustomText, CustomTouchable } from "app/components";
+
 import { MainNavigator } from "app/services";
+
+import { scale } from "app/utilities/scaling";
 
 interface Props {
     style?: StyleProp<ViewStyle>;
@@ -15,15 +19,24 @@ const TrackItemComponent: SFC<Props> = (props) => {
         });
     }
 
+    const albumImageUrl = props.track.album 
+        && props.track.album.images
+        && props.track.album.images.length ? props.track.album.images[0].url : '';
+
+    const artists = props.track.artists 
+        && props.track.artists.length 
+        ? props.track.artists.map(q => q.name).join(', ')
+        : '';
+
     return (
         <CustomTouchable onPress={onTrackPressed} style={props.style}>
             <View>
-                <Image source={ { uri: props.track.preview_url } }  />
+                <Image style={style.image} source={ { uri: albumImageUrl } }  />
                 <CustomText>
                     Name: { props.track.name}
                 </CustomText>
                 <CustomText>
-                    Artists: { props.track.artists.map(q => q.name).join(', ') }
+                    Artists: { artists }
                 </CustomText>
                 <CustomText>
                     Popularity: { props.track.popularity }
@@ -32,5 +45,12 @@ const TrackItemComponent: SFC<Props> = (props) => {
         </CustomTouchable>     
     )
 };
+
+const style = StyleSheet.create({
+    image: {
+        height: scale(40),
+        width: scale(40)
+    }
+});
 
 export default TrackItemComponent;

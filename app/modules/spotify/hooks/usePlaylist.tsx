@@ -1,5 +1,5 @@
 import useSpotifyApi, { SpotifyApiHookResult } from "./useSpotifyApi";
-import SpotifyService from "../SpotifyService";
+import SpotifyService from "app/modules/spotify/SpotifyService";
 
 const usePlaylist = (id: string) => {
     const spotify = SpotifyService.getSpotifyApi();

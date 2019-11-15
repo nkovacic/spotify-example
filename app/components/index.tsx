@@ -7,6 +7,7 @@ export { default as CustomText, FontWeight } from './CustomText';
 export { default as CustomTouchable } from './CustomTouchable';
 export { default as CustomIcon, IconType } from './CustomIcon';
 export { default as ErrorBoundary } from './ErrorBoundary';
+export { default as HumanReadableTime } from './HumanReadableTime';
 export { default as Logo, LogoSize } from './Logo';
 export { default as NavbarTitle } from './NavbarTitle';
 export { default as Page } from './Page';

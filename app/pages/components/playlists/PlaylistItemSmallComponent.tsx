@@ -42,6 +42,6 @@ const style = StyleSheet.create({
         height: scale(40),
         width: scale(40)
     }
-})
+});
 
 export default PlaylistItemSmallComponent;
