@@ -27,7 +27,7 @@ const PlayListDetailsComponent: SFC<Props> = (props) => {
     if (data) {
         return (
             <ScrollView>
-                { data.tracks.items.map(q => <TrackItemComponent key={q.track.id} track={q.track} style={styles.trackItem} />) }
+                { data.tracks.items.filter(q => q.track).map(q => <TrackItemComponent key={q.track.id} track={q.track} style={styles.trackItem} />) }
             </ScrollView>
         );
     }

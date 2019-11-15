@@ -5,7 +5,7 @@ import { appReducerActionCreators } from "./reducer";
 import { spotifyReducerActionCreators } from "app/modules/spotify/reducer";
 
 import SpotifyService from "app/modules/spotify/SpotifyService";
-import { AlertService } from "app/services";
+import { AlertService, Logger } from "app/services";
 
 const appInit = function* () {
     yield call({
@@ -18,11 +18,15 @@ const appInit = function* () {
         fn: SpotifyService.isLoggedInAsync
     });
 
+    Logger.log(`Is logged in: ${isLoggedIn}`);
+
     if (!isLoggedIn) {
         isLoggedIn = yield call({
             context: SpotifyService,
-            fn: SpotifyService.loginAsync
+            fn: SpotifyService.refreshLogin
         });
+
+        Logger.log(`Is logged in 2: ${isLoggedIn}`);
 
         yield call({
             context: SpotifyService,
