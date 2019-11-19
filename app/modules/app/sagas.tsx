@@ -18,15 +18,11 @@ const appInit = function* () {
         fn: SpotifyService.isLoggedInAsync
     });
 
-    Logger.log(`Is logged in: ${isLoggedIn}`);
-
     if (!isLoggedIn) {
         isLoggedIn = yield call({
             context: SpotifyService,
             fn: SpotifyService.refreshLogin
         });
-
-        Logger.log(`Is logged in 2: ${isLoggedIn}`);
 
         yield call({
             context: SpotifyService,
@@ -42,14 +38,14 @@ const appInit = function* () {
         const currentUser: SpotifyApi.CurrentUsersProfileResponse = yield call({
             context: spotifyApi,
             fn: spotifyApi.getMe
-        })
+        });
 
         const userCountryFeaturedPlaylists: SpotifyApi.ListOfFeaturedPlaylistsResponse = yield call({
             context: spotifyApi,
             fn: spotifyApi.getFeaturedPlaylists,          
         }, {
             country: currentUser.country
-        })
+        });
         
         if (userCountryFeaturedPlaylists) {
             yield put(spotifyReducerActionCreators.setPlaylists(userCountryFeaturedPlaylists.playlists));

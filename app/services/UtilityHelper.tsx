@@ -1,6 +1,11 @@
 import { IConstructor } from "app/utilities/generics";
+import uuid from "uuid";
 
 export class UtilityHelper {
+    static createGuid() {
+        return uuid.v4();
+    }
+
     static equals(...objects: Array<any>) {
         if (!objects || objects.length < 1) {
             return false;

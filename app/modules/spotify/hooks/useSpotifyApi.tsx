@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Logger } from "app/services";
 
 export type SpotifyApiHookResult<T> = [T, boolean, any];
 
@@ -16,6 +17,8 @@ const useSpotifyApi = (spotifyApiFunc: SpotifyApiFunc, options?: any) => {
                 setLoading(true);
 
                 const result = await spotifyApiFunc(options);
+
+                Logger.log(result);
 
                 setLoading(false);
                 setData(result);
