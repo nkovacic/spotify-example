@@ -18,8 +18,6 @@ const useSpotifyApi = (spotifyApiFunc: SpotifyApiFunc, options?: any) => {
 
                 const result = await spotifyApiFunc(options);
 
-                Logger.log(result);
-
                 setLoading(false);
                 setData(result);
                 setError(null);

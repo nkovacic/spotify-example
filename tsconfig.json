@@ -11,9 +11,10 @@
         "strict": true,
         "strictPropertyInitialization": false,
         "target": "esnext",
-        "baseUrl": "./app",
+        "baseUrl": "./",
         "paths": {
-            "app/*": ["*"]
+            "app/*": ["app/*"],
+            "mocks/*": [ "__mocks__/*" ]
         }
     },
     "exclude": ["node_modules"]

@@ -1,6 +1,6 @@
 import { ImmerReducer, createActionCreators, createReducerFunction } from 'immer-reducer';
 
-import { IMainState } from 'app/modules/reducers';
+import { IMainState } from 'app/modules/state';
 import { IRoutingState, RoutingDirection } from './state';
 
 import { UtilityHelper } from 'app/services/UtilityHelper';
