@@ -36,7 +36,7 @@ exports[`Test connected Main component should render with given state from Redux
     >
       <Image
         resizeMode="cover"
-        source="test-file-stub"
+        source={1}
         style={
           Object {
             "height": 208.5,

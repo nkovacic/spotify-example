@@ -11,6 +11,7 @@ module.exports = {
     ],
     moduleNameMapper: {
         "^app/(.*)$": "<rootDir>/app/$1",
+        "^[./a-zA-Z0-9$_-]+\\.(jpg|jpeg|png|gif|webp|svg)$": "RelativeImageStub",
         "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/file-mock.tsx",
         "\\.(css|less)$": "identity-obj-proxy"
     },
