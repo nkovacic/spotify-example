@@ -20,7 +20,8 @@ describe('Test connected Main component', () => {
         expect(component.toJSON()).toMatchSnapshot();
     });
 
+    /*
     it('should dispatch an action on image click', () => {
 
-    });
+    });*/
 });

@@ -1,0 +1,1061 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test connected Main component should render with given state from Redux store 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      },
+      Object {
+        "backgroundColor": "#fff",
+        "paddingHorizontal": 0,
+        "paddingTop": 0,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "column",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderBottomRightRadius": 50,
+          "flexDirection": "column",
+          "overflow": "hidden",
+        }
+      }
+    >
+      <Image
+        resizeMode="cover"
+        source="test-file-stub"
+        style={
+          Object {
+            "height": 208.5,
+            "position": "absolute",
+            "width": "100%",
+          }
+        }
+      />
+      <Text
+        fontWeight={1}
+        style={
+          Array [
+            Object {
+              "fontSize": 12.5,
+            },
+            Object {
+              "color": "#ffffff",
+              "fontSize": 25,
+              "marginTop": 150,
+            },
+            Object {
+              "fontFamily": "Gilroy-Bold",
+            },
+          ]
+        }
+      >
+        Spotify - challenge app
+      </Text>
+    </View>
+    <RCTScrollView
+      style={
+        Object {
+          "marginTop": 8.5,
+        }
+      }
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "margin": 4,
+                  "width": "45%",
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://i.scdn.co/image/ab67706f00000002c7c774f88f4bd1a4ea1278ee",
+                  }
+                }
+                style={
+                  Object {
+                    "borderRadius": 8.5,
+                    "height": 125,
+                    "width": 125,
+                  }
+                }
+              />
+              <Text
+                fontWeight={1}
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 12.5,
+                    },
+                    Object {
+                      "color": "black",
+                      "flex": 1,
+                      "fontSize": 18,
+                    },
+                    Object {
+                      "fontFamily": "Gilroy-Bold",
+                    },
+                  ]
+                }
+              >
+                POLLEN
+              </Text>
+              <View
+                size={25}
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 12.5,
+                      "height": 25,
+                      "width": 25,
+                    },
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#FE95B4",
+                      "justifyContent": "center",
+                      "margin": 8.5,
+                      "position": "absolute",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  fontWeight={1}
+                  style={
+                    Array [
+                      Object {
+                        "fontSize": 12.5,
+                      },
+                      Object {
+                        "color": "white",
+                      },
+                      Object {
+                        "fontFamily": "Gilroy-Bold",
+                      },
+                    ]
+                  }
+                >
+                  139
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "margin": 4,
+                  "width": "45%",
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://i.scdn.co/image/ab67706f00000002063a39a0c58aea420134d4cc",
+                  }
+                }
+                style={
+                  Object {
+                    "borderRadius": 8.5,
+                    "height": 125,
+                    "width": 125,
+                  }
+                }
+              />
+              <Text
+                fontWeight={1}
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 12.5,
+                    },
+                    Object {
+                      "color": "black",
+                      "flex": 1,
+                      "fontSize": 18,
+                    },
+                    Object {
+                      "fontFamily": "Gilroy-Bold",
+                    },
+                  ]
+                }
+              >
+                Signed XOXO
+              </Text>
+              <View
+                size={25}
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 12.5,
+                      "height": 25,
+                      "width": 25,
+                    },
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#FE95B4",
+                      "justifyContent": "center",
+                      "margin": 8.5,
+                      "position": "absolute",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  fontWeight={1}
+                  style={
+                    Array [
+                      Object {
+                        "fontSize": 12.5,
+                      },
+                      Object {
+                        "color": "white",
+                      },
+                      Object {
+                        "fontFamily": "Gilroy-Bold",
+                      },
+                    ]
+                  }
+                >
+                  103
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "margin": 4,
+                  "width": "45%",
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://i.scdn.co/image/ab67706f00000002cf9db0004401dc5b13019381",
+                  }
+                }
+                style={
+                  Object {
+                    "borderRadius": 8.5,
+                    "height": 125,
+                    "width": 125,
+                  }
+                }
+              />
+              <Text
+                fontWeight={1}
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 12.5,
+                    },
+                    Object {
+                      "color": "black",
+                      "flex": 1,
+                      "fontSize": 18,
+                    },
+                    Object {
+                      "fontFamily": "Gilroy-Bold",
+                    },
+                  ]
+                }
+              >
+                Alternative R&B
+              </Text>
+              <View
+                size={25}
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 12.5,
+                      "height": 25,
+                      "width": 25,
+                    },
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#FE95B4",
+                      "justifyContent": "center",
+                      "margin": 8.5,
+                      "position": "absolute",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  fontWeight={1}
+                  style={
+                    Array [
+                      Object {
+                        "fontSize": 12.5,
+                      },
+                      Object {
+                        "color": "white",
+                      },
+                      Object {
+                        "fontFamily": "Gilroy-Bold",
+                      },
+                    ]
+                  }
+                >
+                  137
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "margin": 4,
+                  "width": "45%",
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://i.scdn.co/image/ab67706f000000022f5ef11b68089ed3b8166944",
+                  }
+                }
+                style={
+                  Object {
+                    "borderRadius": 8.5,
+                    "height": 125,
+                    "width": 125,
+                  }
+                }
+              />
+              <Text
+                fontWeight={1}
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 12.5,
+                    },
+                    Object {
+                      "color": "black",
+                      "flex": 1,
+                      "fontSize": 18,
+                    },
+                    Object {
+                      "fontFamily": "Gilroy-Bold",
+                    },
+                  ]
+                }
+              >
+                Jazz Vibes
+              </Text>
+              <View
+                size={25}
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 12.5,
+                      "height": 25,
+                      "width": 25,
+                    },
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#FE95B4",
+                      "justifyContent": "center",
+                      "margin": 8.5,
+                      "position": "absolute",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  fontWeight={1}
+                  style={
+                    Array [
+                      Object {
+                        "fontSize": 12.5,
+                      },
+                      Object {
+                        "color": "white",
+                      },
+                      Object {
+                        "fontFamily": "Gilroy-Bold",
+                      },
+                    ]
+                  }
+                >
+                  200
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "margin": 4,
+                  "width": "45%",
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://pl.scdn.co/images/pl/default/8143092486f65bd44c7f3678dcda9641bbf571cb",
+                  }
+                }
+                style={
+                  Object {
+                    "borderRadius": 8.5,
+                    "height": 125,
+                    "width": 125,
+                  }
+                }
+              />
+              <Text
+                fontWeight={1}
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 12.5,
+                    },
+                    Object {
+                      "color": "black",
+                      "flex": 1,
+                      "fontSize": 18,
+                    },
+                    Object {
+                      "fontFamily": "Gilroy-Bold",
+                    },
+                  ]
+                }
+              >
+                PopCo
+              </Text>
+              <View
+                size={25}
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 12.5,
+                      "height": 25,
+                      "width": 25,
+                    },
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#FE95B4",
+                      "justifyContent": "center",
+                      "margin": 8.5,
+                      "position": "absolute",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  fontWeight={1}
+                  style={
+                    Array [
+                      Object {
+                        "fontSize": 12.5,
+                      },
+                      Object {
+                        "color": "white",
+                      },
+                      Object {
+                        "fontFamily": "Gilroy-Bold",
+                      },
+                    ]
+                  }
+                >
+                  50
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "margin": 4,
+                  "width": "45%",
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://i.scdn.co/image/ab67706f000000025b0a722edf7e62a2af7d8e6a",
+                  }
+                }
+                style={
+                  Object {
+                    "borderRadius": 8.5,
+                    "height": 125,
+                    "width": 125,
+                  }
+                }
+              />
+              <Text
+                fontWeight={1}
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 12.5,
+                    },
+                    Object {
+                      "color": "black",
+                      "flex": 1,
+                      "fontSize": 18,
+                    },
+                    Object {
+                      "fontFamily": "Gilroy-Bold",
+                    },
+                  ]
+                }
+              >
+                Channel X
+              </Text>
+              <View
+                size={25}
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 12.5,
+                      "height": 25,
+                      "width": 25,
+                    },
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#FE95B4",
+                      "justifyContent": "center",
+                      "margin": 8.5,
+                      "position": "absolute",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  fontWeight={1}
+                  style={
+                    Array [
+                      Object {
+                        "fontSize": 12.5,
+                      },
+                      Object {
+                        "color": "white",
+                      },
+                      Object {
+                        "fontFamily": "Gilroy-Bold",
+                      },
+                    ]
+                  }
+                >
+                  49
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "margin": 4,
+                  "width": "45%",
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://pl.scdn.co/images/pl/default/e26a6fabb2b6322eede738b4ed95d344f6df65b8",
+                  }
+                }
+                style={
+                  Object {
+                    "borderRadius": 8.5,
+                    "height": 125,
+                    "width": 125,
+                  }
+                }
+              />
+              <Text
+                fontWeight={1}
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 12.5,
+                    },
+                    Object {
+                      "color": "black",
+                      "flex": 1,
+                      "fontSize": 18,
+                    },
+                    Object {
+                      "fontFamily": "Gilroy-Bold",
+                    },
+                  ]
+                }
+              >
+                Global X
+              </Text>
+              <View
+                size={25}
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 12.5,
+                      "height": 25,
+                      "width": 25,
+                    },
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#FE95B4",
+                      "justifyContent": "center",
+                      "margin": 8.5,
+                      "position": "absolute",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  fontWeight={1}
+                  style={
+                    Array [
+                      Object {
+                        "fontSize": 12.5,
+                      },
+                      Object {
+                        "color": "white",
+                      },
+                      Object {
+                        "fontFamily": "Gilroy-Bold",
+                      },
+                    ]
+                  }
+                >
+                  100
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "margin": 4,
+                  "width": "45%",
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://i.scdn.co/image/ab67706f0000000274c56c144d98678a0096ada0",
+                  }
+                }
+                style={
+                  Object {
+                    "borderRadius": 8.5,
+                    "height": 125,
+                    "width": 125,
+                  }
+                }
+              />
+              <Text
+                fontWeight={1}
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 12.5,
+                    },
+                    Object {
+                      "color": "black",
+                      "flex": 1,
+                      "fontSize": 18,
+                    },
+                    Object {
+                      "fontFamily": "Gilroy-Bold",
+                    },
+                  ]
+                }
+              >
+                Jazztronica
+              </Text>
+              <View
+                size={25}
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 12.5,
+                      "height": 25,
+                      "width": 25,
+                    },
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#FE95B4",
+                      "justifyContent": "center",
+                      "margin": 8.5,
+                      "position": "absolute",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  fontWeight={1}
+                  style={
+                    Array [
+                      Object {
+                        "fontSize": 12.5,
+                      },
+                      Object {
+                        "color": "white",
+                      },
+                      Object {
+                        "fontFamily": "Gilroy-Bold",
+                      },
+                    ]
+                  }
+                >
+                  73
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "margin": 4,
+                  "width": "45%",
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://i.scdn.co/image/ab67706f00000002d17c97c3c7f86d62320595e9",
+                  }
+                }
+                style={
+                  Object {
+                    "borderRadius": 8.5,
+                    "height": 125,
+                    "width": 125,
+                  }
+                }
+              />
+              <Text
+                fontWeight={1}
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 12.5,
+                    },
+                    Object {
+                      "color": "black",
+                      "flex": 1,
+                      "fontSize": 18,
+                    },
+                    Object {
+                      "fontFamily": "Gilroy-Bold",
+                    },
+                  ]
+                }
+              >
+                Emotron
+              </Text>
+              <View
+                size={25}
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 12.5,
+                      "height": 25,
+                      "width": 25,
+                    },
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#FE95B4",
+                      "justifyContent": "center",
+                      "margin": 8.5,
+                      "position": "absolute",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  fontWeight={1}
+                  style={
+                    Array [
+                      Object {
+                        "fontSize": 12.5,
+                      },
+                      Object {
+                        "color": "white",
+                      },
+                      Object {
+                        "fontFamily": "Gilroy-Bold",
+                      },
+                    ]
+                  }
+                >
+                  50
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "margin": 4,
+                  "width": "45%",
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://i.scdn.co/image/ab67706f0000000290b31bdc0f3a0ae203242fbc",
+                  }
+                }
+                style={
+                  Object {
+                    "borderRadius": 8.5,
+                    "height": 125,
+                    "width": 125,
+                  }
+                }
+              />
+              <Text
+                fontWeight={1}
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 12.5,
+                    },
+                    Object {
+                      "color": "black",
+                      "flex": 1,
+                      "fontSize": 18,
+                    },
+                    Object {
+                      "fontFamily": "Gilroy-Bold",
+                    },
+                  ]
+                }
+              >
+                Calming Acoustic
+              </Text>
+              <View
+                size={25}
+                style={
+                  Array [
+                    Object {
+                      "borderRadius": 12.5,
+                      "height": 25,
+                      "width": 25,
+                    },
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#FE95B4",
+                      "justifyContent": "center",
+                      "margin": 8.5,
+                      "position": "absolute",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  fontWeight={1}
+                  style={
+                    Array [
+                      Object {
+                        "fontSize": 12.5,
+                      },
+                      Object {
+                        "color": "white",
+                      },
+                      Object {
+                        "fontFamily": "Gilroy-Bold",
+                      },
+                    ]
+                  }
+                >
+                  109
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;

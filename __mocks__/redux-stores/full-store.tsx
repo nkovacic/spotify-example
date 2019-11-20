@@ -10,7 +10,7 @@ const initialState: IMainState = {
         showPageLoader: false
     },
     spotify: {
-        playlists: featurePlaylists.playlists as any
+        playlists: featurePlaylists.playlists.items as any
     },
     routing: {
         currentRoute: '',

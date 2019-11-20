@@ -9,7 +9,6 @@ import { HeaderComponent, PlaylistsListComponent } from 'app/pages/components';
 
 import mainTranslations from 'app/mainTranslations';
 
-import images from '../../assets/images';
 import { scale } from 'app/utilities/scaling';
 
 class Main extends PureComponent<MappedStateAndActions<typeof MainConnect>> {
@@ -21,7 +20,7 @@ class Main extends PureComponent<MappedStateAndActions<typeof MainConnect>> {
 		return (
 			<Page noMargin={true}>
 				<View style={styles.container}>
-					<HeaderComponent title={mainTranslations.general.appTitle} imageSrc={images.header} />
+					<HeaderComponent title={mainTranslations.general.appTitle} />
 					<ScrollView style={styles.dataContainer}>
 						<PlaylistsListComponent playlists={this.props.playlists} />
 					</ScrollView>
