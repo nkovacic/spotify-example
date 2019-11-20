@@ -1,6 +1,6 @@
-import { IMainState } from '../reducers';
+import { IMainState } from '../state';
 
-export class BaseSelector{
+export abstract class BaseSelector{
     protected state : IMainState;
 
     constructor (state : IMainState) {

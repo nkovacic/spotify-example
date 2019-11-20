@@ -1,8 +1,5 @@
 import { ImmerReducer, createActionCreators, createReducerFunction } from 'immer-reducer';
-
-export interface ISpotifyState {
-    playlists: SpotifyApi.PlaylistObjectSimplified[]
-}
+import { ISpotifyState } from './state';
 
 const initialState: ISpotifyState = {
     playlists: []

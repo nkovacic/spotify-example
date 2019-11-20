@@ -1,4 +1,4 @@
-import { IMainState } from '../reducers';
+import { IMainState } from '../state';
 
 import { UtilityHelper } from 'app/services/UtilityHelper';
 

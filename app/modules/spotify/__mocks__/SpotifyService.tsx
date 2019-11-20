@@ -4,9 +4,9 @@ import { isAfter, addHours } from 'date-fns';
 
 import { UtilityHelper } from 'app/services';
 
-import featurePlaylists from './spotify-mocked-requests/feature-playlists';
-import userMe from './spotify-mocked-requests/user-me';
-import singlePlaylist from './spotify-mocked-requests/single-playlist';
+import featurePlaylists from 'mocks/spotify-mocked-requests/feature-playlists';
+import userMe from 'mocks/spotify-mocked-requests/user-me';
+import singlePlaylist from 'mocks/spotify-mocked-requests/single-playlist';
 
 export interface ISpotifySession {
     accessToken: string;
@@ -18,28 +18,24 @@ export interface ISpotifySession {
 const fakeSpotifyApi: SpotifyApi.SpotifyWebApiJs = {
     getMe: () => {
         return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(userMe);
-            }, 100);
+            resolve(userMe);
         });
     },
     getFeaturedPlaylists: (options?: Object) => {
         return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(featurePlaylists);
-            }, 200);
+            resolve(featurePlaylists);
         });
     },
     getPlaylist: (playlistId: string) => {
         return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(singlePlaylist);
-            }, 200);
+            resolve(singlePlaylist);
         });
     }
 } as any;
 
 class SpotifyService {
+    private isLoggedIn = false;
+    
     private spotifyApi: SpotifyApi.SpotifyWebApiJs | null = null;
 
     public async initializeAsync() {
@@ -51,7 +47,7 @@ class SpotifyService {
     }
 
     public async isLoggedInAsync() {
-        let isLoggedIn = true;
+        let isLoggedIn = this.isLoggedIn;
 
         if (isLoggedIn) {
             const session = await this.getSessionAsync();
@@ -64,9 +60,9 @@ class SpotifyService {
 
     public async loginAsync() {
         return new Promise<boolean>((resolve) => {
-            setTimeout(() => {
-                resolve(true);
-            }, 500)
+            this.isLoggedIn = true;
+
+            resolve(true);
         });
     }
 
@@ -84,6 +80,8 @@ class SpotifyService {
     }
 
     public async refreshLogin() {
+        this.isLoggedIn = false;
+        
         return await this.loginAsync();
     }
 

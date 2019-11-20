@@ -1,13 +1,15 @@
 
+import { AnyAction } from "redux";
 import { takeLeading, call, put } from "redux-saga/effects";
 
 import { appReducerActionCreators } from "./reducer";
 import { spotifyReducerActionCreators } from "app/modules/spotify/reducer";
 
 import SpotifyService from "app/modules/spotify/SpotifyService";
-import { AlertService, Logger } from "app/services";
+import { AlertService, Logger, UtilityHelper } from "app/services";
 
-const appInit = function* () {
+
+export const appInit = function* (action: AnyAction) {
     yield call({
         context: SpotifyService,
         fn: SpotifyService.initializeAsync

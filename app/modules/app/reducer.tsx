@@ -1,8 +1,5 @@
 import { ImmerReducer, createActionCreators, createReducerFunction } from 'immer-reducer';
-
-export interface IAppState {
-    showPageLoader: boolean;
-}
+import { IAppState } from './state';
 
 const initialState: IAppState = {
     showPageLoader: false
